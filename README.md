@@ -176,7 +176,8 @@ Since SampleWebRTC comes with only the basic code to make a video call, below ar
  -------------
 
 <b>Other useful info:</b><br>
- All of the API from sip.js can be used. For more details visit <a href="https://sipjs.com/api/0.7.0/">sip.js</a>.
+ All of the API from sip.js can be used.<br>
+ For more details visit <a href="https://sipjs.com/api/0.7.0/">sip.js</a>.
 
 ----------------------------------------------------
 
