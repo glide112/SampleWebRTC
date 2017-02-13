@@ -111,7 +111,7 @@ Since SampleWebRTC comes only with the basic video call feature, below are some 
  -------------
 
 <b>Incoming call:</b><br>
- If the client is registered to the server, you can also receive calls but then you will also need to consider a dialog and a ringtone(ex mp3 file) when a invite comes in. Below is an example which you can refer to when creating a dialog for incoming call.
+ If the client is registered to the server, you can also receive calls but then you will also need to consider a dialog to accept or decline with a ringtone (ex mp3 file) when a invite comes in. Below is an example which you can refer to when creating a dialog for incoming call.
  -------------
      userAgent.on('invite', function(session) {
       console.log('console: receiving invite from (displayName): ' + session.remoteIdentity.displayName);
