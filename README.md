@@ -71,23 +71,23 @@ Since SampleWebRTC comes with only the basic code to make a video call, below ar
 
  -------------
      var options = {
-     media: {
-     constraints: {
-     audio: true,
-     video: {
-     deviceId: 'com.apple.avfoundation.avcapturedevice.built-in_video:0',
-     mandatory: {},
-     optional: [{
-     }, {
-     facingMode: 'user'
-     }]
-     }
-     },
-     render: {
-     remote: RemoteVideo,
-     local: LocalVideo
-     }
-     }
+      media: {
+       constraints: {
+        audio: true,
+        video: {
+            deviceId: 'com.apple.avfoundation.avcapturedevice.built-in_video:0',
+            mandatory: {},
+            optional: [{
+            }, {
+                facingMode: 'user'
+            }]
+         }
+        },
+        render: {
+         remote: RemoteVideo,
+         local: LocalVideo
+        }
+       }
      };
  -------------
 
