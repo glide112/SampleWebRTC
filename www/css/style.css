@@ -1,0 +1,72 @@
+/*
+ SampleWebRTC for iOS
+ written by Yosuke Sawamura
+ yosuke.sawamura@gmail.com
+ */
+
+body {
+    font-family: 'Arial', 'Tahoma', sans-serif;
+    font-size: 18px;
+}
+
+.container-video{
+    position: fixed;
+    top: 25px;
+    left: 0px;
+    width: 100%;
+}
+
+#remoteVideo {
+    width: 100%;
+}
+
+.conatiner-localVideo{
+    position: relative;
+    top: 10px;
+}
+
+#localVideo {
+    position: fixed;
+    width: 40%;
+    right: 10px;
+}
+
+.container-credential{
+    position: fixed;
+    bottom: 0px;
+}
+
+#username {
+    height: 35px;
+    font-size: 12pt;
+}
+
+#password {
+    height: 35px;
+    font-size: 12pt;
+}
+
+#serverurl {
+    height: 35px;
+    font-size: 12pt;
+}
+
+#destination {
+    height: 35px;
+    font-size: 12pt;
+}
+
+#btnCall {
+    width: 100px;
+    height: 100px;
+}
+
+#btnHang{
+    width: 100px;
+    height: 100px;
+}
+
+#btnMic{
+    width: 100px;
+    height: 100px;
+}
