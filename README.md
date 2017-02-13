@@ -111,74 +111,34 @@ Since SampleWebRTC comes with only the basic code to make a video call, below ar
  -------------
 
 <b>Incoming call:</b><br>
- If the client is register to the server, you can receive calls but you will also need to consider a dialog and a ringtone(ex mp3 file) when a invite come in.
- Below is one of a sample which you can refer to create a dialog.<br>
+ If the client is register to the server, you can receive calls but you will also need to consider a dialog and a ringtone(ex mp3 file) when a invite come in. Below is one of the sample which you can refer to when creating a dialog fro incoming call.
  -------------
    userAgent.on('invite', function(session) {
-       console.log('console: receiving invite from (displayName): ' + session.remoteIdentity.displayName);
-       console.log('console: receiving invite from (uri): ' + session.remoteIdentity.uri);
-       ring.play();
-       var winW = window.innerWidth;
-       var winH = window.innerHeight;
-       var dialogoverlay = document.getElementById('dialogoverlay');
-       var dialogbox = document.getElementById('dialogbox');
-       
-       dialogoverlay.style.display = "block";
-       dialogoverlay.style.height = winH+"px";
-       dialogbox.style.left = (winW/2) - (250 * .5)+"px";
-       dialogbox.style.top = "100px";
-       dialogbox.style.display = "block";
-       
-       document.getElementById('dialogboxhead').innerHTML = "Call from:";
-       document.getElementById('dialogboxbody').innerHTML = session.remoteIdentity.displayName;
-       document.getElementById('dialogboxfoot').innerHTML = '<button id="dialogbuttonA" onclick="accept()">Accept</button> <button id="dialogbuttonR" onclick="reject()">Reject</button>';
-       
-    reject = function(){
-      ring.pause();
-      ring.currentTime = 0;
-      document.getElementById('dialogbox').style.display = "none";
-      document.getElementById('dialogoverlay').style.display = "none";
-      console.log('console: reject invite');
-      session.reject();
-      inCall = false;
-    }
-    accept = function(){
-      LocalVideo.style.visibility="visible";
-      RemoteVideo.style.visibility="visible";
-      ring.pause();
-      ring.currentTime = 0;
-      document.getElementById('dialogbox').style.display = "none";
-      document.getElementById('dialogoverlay').style.display = "none";
-      document.body.style.background = 'black';
-      ImgCall.src = 'img/call-red.png';
-      ImgMic.src = 'img/mic-green.png';
-      ImgRearCamera.src = 'img/camera-green.png';
-      BtnMic.disabled = false;
-      BtnRearCamera.disabled = false;
-      inCall = true;
-      console.log('console: accept invite');
-      window.plugins.insomnia.keepAwake();
-       session.accept({
-        media: {
-         render: {
-          remote: RemoteVideo,
-          local: LocalVideo
-           }
-        }
-       });
-      var remoteURI = session.remoteIdentity + "";  
-      var uriNum = remoteURI.split(/[:@]/);
-      console.log('console: remote number ' + uriNum[1]);
-      connection.checkPresence(localAauthorizationUser + '@xxxx.co.jp', function(isRoomExists, roomid) {
-         if(isRoomExists) {
-          console.log('console: socket join ' + roomid);
-          connection.join(roomid);
-         } else {
-          console.log('console: socket open ' + roomid);
-          connection.open(roomid);
-         }
-      });
-    });
+    console.log('console: receiving invite from (displayName): ' + session.remoteIdentity.displayName);
+    console.log('console: receiving invite from (uri): ' + session.remoteIdentity.uri);
+    ring.play();
+    //videoSipURI = session.remoteIdentity.uri;  
+    var winW = window.innerWidth;
+    var winH = window.innerHeight;
+    var dialogoverlay = document.getElementById('dialogoverlay');
+    var dialogbox = document.getElementById('dialogbox');
+    dialogoverlay.style.display = "block";
+    dialogoverlay.style.height = winH+"px";
+    dialogbox.style.left = (winW/2) - (250 * .5)+"px";
+    dialogbox.style.top = "100px";
+    dialogbox.style.display = "block";
+    document.getElementById('dialogboxhead').innerHTML = "Call from:";
+    document.getElementById('dialogboxbody').innerHTML = session.remoteIdentity.displayName;
+    document.getElementById('dialogboxfoot').innerHTML = '<button id="dialogbuttonA" onclick="accept()">Accept</button> <button id="dialogbuttonR" onclick="reject()">Reject</button>';
+  reject = function(){
+    ring.pause();
+    ring.currentTime = 0;
+    document.getElementById('dialogbox').style.display = "none";
+    document.getElementById('dialogoverlay').style.display = "none";
+    console.log('console: reject invite');
+    session.reject();
+    inCall = false;
+  }
  -------------
 
 <b>Other useful info:</b><br>
