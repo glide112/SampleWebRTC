@@ -8,6 +8,11 @@ Sample WebRTC client for iOS (iPhone/iPad) which can communicate with SIP relate
 This is a sample WebRTC client for iOS device which can register to WebRTC capable servers such as FreeSwitch or Asterisk.
 Similar solution can be developed using native codes but to make it simple and more javascript related the codes are tweeked and pre-built using cordova so you can start scripting right away.
 Tested successfully connecting to FreeSwitch and interworked video calls between SIP endpoints (ex Polycom HDX8004, Tandberg Edge95, Avaya Scopia XT5000).
+<br><br>
+
+<div style="text-align:center">
+<img border="0" src="https://raw.githubusercontent.com/glide112/SampleWebRTC/master/image/sample_screenshot.png" height="384">
+</div>
 
 ----------------------------------------------------
 ###Requirements:
