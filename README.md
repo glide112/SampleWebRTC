@@ -24,12 +24,12 @@ Device<br>
 
 WebRTC(SIP) server<br>
  *FreeSWITCH Version 1.6.9+ (CentOS Linux release 7.2.1511)<br>
- *Basic guide can be seen <a href="https://freeswitch.org/confluence/display/FREESWITCH/WebRTC">here</a><br>
+ *Basic guide can be seen <a href="https://freeswitch.org/confluence/display/FREESWITCH/WebRTC" target=_blank>here</a><br>
  *Note that iOS will not accept self-signed certificate so also prepare a signed certicate even for a test calls. 
  
 ----------------------------------------------------
 ###To do:
-1. <a href="https://drive.google.com/file/d/0B7XznYqJ4iLnZHlBU1NjWjUtOG8/view?usp=sharing">Donwload</a> and extract all files and move to "com.sample.webrtc" folder.
+1. <a href="https://drive.google.com/file/d/0B7XznYqJ4iLnZHlBU1NjWjUtOG8/view?usp=sharing" target=_blank>Donwload</a> and extract all files and move to "com.sample.webrtc" folder.
 
  $ cd com.sample.webrtc
 
@@ -177,7 +177,7 @@ Since SampleWebRTC comes with only the basic code to make a video call, below ar
 
 <b>Other useful info:</b><br>
  All of the API from sip.js can be used.<br>
- For more details visit <a href="https://sipjs.com/api/0.7.0/">sip.js</a>.
+ For more details visit <a href="https://sipjs.com/api/0.7.0/" target=_blank>sip.js</a>.
 
 ----------------------------------------------------
 
