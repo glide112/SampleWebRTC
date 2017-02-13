@@ -29,7 +29,7 @@ WebRTC(SIP) server<br>
  
 ----------------------------------------------------
 ###To do:
-1. <a href="https://drive.google.com/file/d/0B7XznYqJ4iLnZHlBU1NjWjUtOG8/view?usp=sharing">Donwload</a> and extract all files and move to "com.sample.webrtc" folder.
+1. <a href="https://drive.google.com/file/d/0B7XznYqJ4iLnZHlBU1NjWjUtOG8/view?usp=sharing">Donwload</a> and extract, move to "com.sample.webrtc" folder.
 
  $ cd com.sample.webrtc
 
