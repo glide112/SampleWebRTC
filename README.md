@@ -1,5 +1,5 @@
 # SampleWebRTC
-Sample WebRTC client for iOS (iPhone/iPad) which can communicate with SIP related servers.
+Basic WebRTC video client sample for iOS (iPhone/iPad) which can communicate with SIP related servers.
 
 ----------------------------------------------------
 
@@ -33,7 +33,7 @@ WebRTC(SIP) server<br>
  
 ----------------------------------------------------
 ###To do:
-1. <a href="https://drive.google.com/file/d/0B7XznYqJ4iLnZHlBU1NjWjUtOG8/view?usp=sharing">Donwload</a> and extract, move to "com.sample.webrtc" folder.
+1. <a href="https://drive.google.com/file/d/0B7XznYqJ4iLnZHlBU1NjWjUtOG8/view?usp=sharing">Donwload</a> and extract then move to "com.sample.webrtc" folder.
 
  $ cd com.sample.webrtc
 
@@ -63,7 +63,7 @@ WebRTC(SIP) server<br>
 ----------------------------------------------------
 
 ###Tips:
-Since SampleWebRTC comes with only the basic code to make a video call, below are some tips to add common features.
+Since SampleWebRTC comes only with the basic video call feature, below are some tips to add common features.
 
 
 <b>Rear camera:</b><br>
@@ -92,7 +92,7 @@ Since SampleWebRTC comes with only the basic code to make a video call, below ar
  -------------
 
 <b>Audio output:</b><br>
- As the default audio come out as phone mode (EARPIECE) so if you want to have from speaker, you can refer below as a sample. 
+ As the default audio come out as phone mode (EARPIECE) so if you want to have it from speaker, you can refer below as a sample. 
  -------------
     document.addEventListener('deviceready', function() {
       window.HeadsetDetection.registerRemoteEvents(function(status) {
@@ -111,7 +111,7 @@ Since SampleWebRTC comes with only the basic code to make a video call, below ar
  -------------
 
 <b>Incoming call:</b><br>
- If the client is register to the server, you can receive calls but you will also need to consider a dialog and a ringtone(ex mp3 file) when a invite come in. Below is one of the sample which you can refer to when creating a dialog fro incoming call.
+ If the client is registered to the server, you can also receive calls but then you will also need to consider a dialog and a ringtone(ex mp3 file) when a invite comes in. Below is an example which you can refer to when creating a dialog for incoming call.
  -------------
      userAgent.on('invite', function(session) {
       console.log('console: receiving invite from (displayName): ' + session.remoteIdentity.displayName);
