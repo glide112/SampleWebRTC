@@ -113,6 +113,8 @@ Since SampleWebRTC comes only with the basic outgoing video call, below are some
 <b>Incoming call:</b><br>
  If the client is registered to the server, you can also receive calls but then you will also need to consider a dialog to accept or decline with a ringtone (ex mp3 file) when an invite comes in. Below is an example which you can refer to when creating a dialog for incoming call.
  -------------
+     var ring = new Audio('audio/ring.mp3');
+ 
      userAgent.on('invite', function(session) {
       console.log('console: receiving invite from (displayName): ' + session.remoteIdentity.displayName);
       console.log('console: receiving invite from (uri): ' + session.remoteIdentity.uri);
@@ -128,16 +130,18 @@ Since SampleWebRTC comes only with the basic outgoing video call, below are some
       dialogbox.style.display = "block";
       document.getElementById('dialogboxhead').innerHTML = "Call from:";
       document.getElementById('dialogboxbody').innerHTML = session.remoteIdentity.displayName;
-      document.getElementById('dialogboxfoot').innerHTML = '<button id="dialogbuttonA" onclick="accept()">Accept</button> <button id="dialogbuttonR" onclick="reject()">Reject</button>';
+      document.getElementById('dialogboxfoot').innerHTML = '<button id="dialogbuttonA" onclick="accept()">Accept</button> ' +
+                                                 '<button id="dialogbuttonR" onclick="reject()">Reject</button>';
+      
       reject = function(){
-      ring.pause();
-      ring.currentTime = 0;
-      document.getElementById('dialogbox').style.display = "none";
-      document.getElementById('dialogoverlay').style.display = "none";
-      console.log('console: reject invite');
-      session.reject();
-      inCall = false;
-     }
+        ring.pause();
+        ring.currentTime = 0;
+        document.getElementById('dialogbox').style.display = "none";
+        document.getElementById('dialogoverlay').style.display = "none";
+        console.log('console: reject invite');
+        session.reject();
+        inCall = false;
+      }
      
      accept = function(){
         LocalVideo.style.visibility="visible";
@@ -164,18 +168,22 @@ Since SampleWebRTC comes only with the basic outgoing video call, below are some
           }
          }
         });
+        
         var remoteURI = session.remoteIdentity + "";  
         var uriNum = remoteURI.split(/[:@]/);
         console.log('console: remote number ' + uriNum[1]);
+        
         connection.checkPresence(localAauthorizationUser + '@xxx.co.jp', function(isRoomExists, roomid) {
-        if(isRoomExists) {
-          console.log('console: socket join ' + roomid);
-          connection.join(roomid);
-        } else {
-          console.log('console: socket open ' + roomid);
-          connection.open(roomid);
+          if(isRoomExists) {
+            console.log('console: socket join ' + roomid);
+            connection.join(roomid);
+          } else {
+            console.log('console: socket open ' + roomid);
+            connection.open(roomid);
           }
-     });
+        });
+        
+     });  
  -------------
 
 <b>Other useful info:</b><br>
