@@ -29,7 +29,7 @@ Device<br>
 WebRTC(SIP) server<br>
  *FreeSWITCH Version 1.6.9+ (CentOS Linux release 7.2.1511)<br>
  *Basic guide can be seen <a href="https://freeswitch.org/confluence/display/FREESWITCH/WebRTC">here</a><br>
- *Note that iOS will not accept self-signed certificate so also prepare a signed certicate even for a test calls. 
+ *Note that iOS will not accept self-signed certificate so also prepare a signed(trusted) cert even for a test calls. 
  
 ----------------------------------------------------
 ###To do:
@@ -63,7 +63,7 @@ WebRTC(SIP) server<br>
 ----------------------------------------------------
 
 ###Tips:
-Since SampleWebRTC comes only with the basic video call feature, below are some tips to add common features.
+Since SampleWebRTC comes only with the basic outgoing video call, below are some tips to add common features.
 
 
 <b>Rear camera:</b><br>
