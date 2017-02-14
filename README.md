@@ -180,7 +180,7 @@ Since SampleWebRTC comes only with the basic outgoing video call, below are some
 
 <b>Other useful info:</b><br>
  All of the APIs from sip.js or Native WebRTC APIs (ex RTCPeerConnection, MediaStream, getUserMedia...) can be used.<br>
- For more sip.js visit <a href="https://sipjs.com/api/0.7.0/">sip.js</a>.
+ For more sip.js visit <a href="https://sipjs.com/api/0.7.0/">sip.js</a>.<br>
  For more NativeAPIs visit <a href="https://webrtc.org/native-code/native-apis/">WebRTC</a>.
 
 ----------------------------------------------------
