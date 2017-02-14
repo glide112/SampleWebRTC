@@ -143,7 +143,7 @@ Since SampleWebRTC comes only with the basic outgoing video call, below are some
         inCall = false;
       }
      
-     accept = function(){
+      accept = function(){
         LocalVideo.style.visibility="visible";
         RemoteVideo.style.visibility="visible";
         ring.pause();
@@ -167,13 +167,13 @@ Since SampleWebRTC comes only with the basic outgoing video call, below are some
            local: LocalVideo
           }
          }
-        });
+      });
         
-        var remoteURI = session.remoteIdentity + "";  
-        var uriNum = remoteURI.split(/[:@]/);
-        console.log('console: remote number ' + uriNum[1]);
+      var remoteURI = session.remoteIdentity + "";  
+      var uriNum = remoteURI.split(/[:@]/);
+      console.log('console: remote number ' + uriNum[1]);
         
-        connection.checkPresence(localAauthorizationUser + '@xxx.co.jp', function(isRoomExists, roomid) {
+      connection.checkPresence(localAauthorizationUser + '@xxx.co.jp', function(isRoomExists, roomid) {
           if(isRoomExists) {
             console.log('console: socket join ' + roomid);
             connection.join(roomid);
@@ -181,7 +181,7 @@ Since SampleWebRTC comes only with the basic outgoing video call, below are some
             console.log('console: socket open ' + roomid);
             connection.open(roomid);
           }
-        });
+      });
         
      });  
  -------------
